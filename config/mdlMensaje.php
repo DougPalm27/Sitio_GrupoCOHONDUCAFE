@@ -14,7 +14,7 @@ class mdlMensaje{
         
         $stmt->bindParam(":fullname", $losDatos->fullname);
         $stmt->bindParam(":email", $losDatos->email);
-        $stmt->bindParam(":telefono", $losDatos->telefono);
+        $stmt->bindParam(":telefono", $losDatos->tel);
         $stmt->bindParam(":mensaje", $losDatos->mensaje);  
         try {
             $stmt->execute();

@@ -3109,7 +3109,7 @@
         <!-- banner start -->
         <div class="banner playing">
             <video id="videoIntro" autoplay controls muted>
-                <source src="./img/Video_Inicio/videoIntro.mov" type="video/mp4">
+                <source src="./img/Video_Inicio/videoIntro.mp4" type="video/mp4">
             </video>
         </div>
 

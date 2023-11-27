@@ -4419,13 +4419,13 @@
                         Contact us now!
                     </p>
                 </div>
-                <form class="reservation_form" action="booking.php" method="post" data-type="booking">
+                <form class="reservation_form"  >
                     <input class="field required" type="text" name="fullname" id="fullname" placeholder="Full Name" />
                     <input class="field required" type="text" data-type="email" name="email" id="email"
                         placeholder="Email" />
                     <input class="field required" type="text" data-type="tel" name="tel" id="tel" placeholder="Phone" />
                     <textarea class="field" name="mensaje" id="mensaje" placeholder="Message"></textarea>
-                    <button class="btn" type="submit" id="sendInfo">send</button>
+                    <a class="btn" id="sendInfo">send</a>
                 </form>
             </div>
         </section>
@@ -4453,6 +4453,9 @@
     </div>
 </body>
 <script>
+    $("#sendInfo").on("click",function(){
+        
+    })
 const phoneInputField = document.querySelector("#tel");
 const phoneInput = window.intlTelInput(phoneInputField, {
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",

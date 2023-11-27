@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    
+   
     $("#sendInfo").on("click", function(){
-        alert(1);
         let losDatos = {
             fullname: $("#fullname").val(),
             email: $("#email").val(),
@@ -16,7 +15,7 @@ $(document).ready(function(){
         }
         else{
             console.log(losDatos)
-            guardarDatos(losDatos);
+            guardarMensaje(losDatos);
         }
     });
 
@@ -24,7 +23,7 @@ $(document).ready(function(){
 function guardarMensaje(losDatos){
     $.ajax({
         type: "POST",  
-        url: "./ctrMensaje.php",
+        url: "./config/ctrMensaje.php",
         data: {
           losDatos:losDatos
         },

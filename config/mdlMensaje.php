@@ -8,7 +8,7 @@ class mdlMensaje{
     }
     public function guardarInfo($losDatos)
     {
-        $sql = "INSERT INTO info (:fullname, :email, :telefono, :mensaje) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO honducafe.info (fullname, email, telefono, mensaje) VALUES (:fullname, :email, :telefono, :mensaje)";
         
         $stmt = $this->conn->prepare($sql);
         
@@ -28,12 +28,12 @@ class mdlMensaje{
             $errorInfo = $e->errorInfo;
             $resultado = json_encode(array(
                 'status' => 'error',
-                'mensaje' => 'Error al ejecutar el procedimiento almacenado',
+                'mensaje' => 'Error al ejecutar el insert',
                 'detalles' => $errorInfo,
             ));
     
             // Imprimir mensaje de error en el log del servidor
-            error_log('Error al ejecutar el procedimiento almacenado: ' . print_r($errorInfo, true));
+            error_log('Error al ejecutar el insert: ' . print_r($errorInfo, true));
         }
     
         echo $resultado;
